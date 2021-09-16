@@ -29,37 +29,37 @@ export default {
             {
                 slug: 'trending',
                 title: 'Recomendados para Você',
-                items: []
+                items: await basicFetch(`/trending/all/week?language=pt-BR&api_key=${API_KEY}`)
             },
             {
                 slug: 'toprated',
                 title: 'Em Alta',
-                items: []
+                items: await basicFetch(`/movie/top_rated?language=pt-BR&api_key=${API_KEY}`)
             },
             {
                 slug: 'action',
                 title: 'Ação',
-                items: []
+                items: await basicFetch(`/discover/movie?with_generes=28&language=pt-BR&api_key=${API_KEY}`)
             },
             {
                 slug: 'Comedy',
                 title: 'Comédia',
-                items: []
+                items: await basicFetch(`/discover/movie?with_generes=35&language=pt-BR&api_key=${API_KEY}`)
             },
             {
                 slug: 'Horror',
                 title: 'Terror',
-                items: []
+                items: await basicFetch(`/discover/movie?with_generes=27&language=pt-BR&api_key=${API_KEY}`)
             },
             {
                 slug: 'Romance',
                 title: 'Romance',
-                items: []
+                items: await basicFetch(`/discover/movie?with_generes=10749&language=pt-BR&api_key=${API_KEY}`)
             },
             {
                 slug: 'Documentary',
                 title: 'Documentários',
-                items: []
+                items: await basicFetch(`/discover/movie?with_generes=99&language=pt-BR&api_key=${API_KEY}`)
             },
         ]
     }
