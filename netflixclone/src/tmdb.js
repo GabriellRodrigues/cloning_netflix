@@ -1,5 +1,5 @@
 const API_KEY = 'dd4c6fcbec83af2c302f97c1be30fbd9';
-const API_BASE = 'https://developers.themoviedb.org/3';
+const API_BASE = 'https://api.themoviedb.org/3';
 
 /*
 - Originais da netflix
@@ -13,7 +13,7 @@ const API_BASE = 'https://developers.themoviedb.org/3';
 */
 
 const basicFetch = async (endpoint) => {
-    const req = await fetch(`${API_BASE}${endpoint}`);
+    const req = await fetch(`${API_BASE}${endpoint}`)
     const json = await req.json();
     return json;
 }
